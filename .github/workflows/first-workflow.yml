@@ -1,0 +1,19 @@
+# YML format works with indentation
+
+# Name of workflow
+name: First Workflow
+# Makes sure we can manually trigger this workflow
+on: workflow_dispatch
+#Must be 'jobs' NOT job
+jobs:
+  #you can name this however you like
+  first-job:
+    # must be 'runs-on'
+    runs-on: ubuntu-latest
+    # list of steps
+    steps:
+      - name: Print greeting
+        #Define the command to be executed in the command line
+        run: echo "Hello world!"
+      - name: echo "Done - Bye!"
+  
